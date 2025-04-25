@@ -1,13 +1,11 @@
 // question 1
 const http = require("http");
-const server = http.createServer((req,res)=>{
-    res.writeHead(200,{"content-type":"text/plain"})
+const server = http
+  .createServer((req, res) => {
+    res.writeHead(200, { "content-type": "text/plain" });
     res.end("I remember how to do it");
-}).listen(5000)
-
-
-
-
+  })
+  .listen(5000);
 
 // question 2
 numbers = [1, 2, 3, 4, 5, 6];
@@ -60,15 +58,14 @@ console.log(NegPosNum(0));
 console.log(NegPosNum(-5));
 console.log(NegPosNum(5));
 
-
 // question 6
-function delayMessage(message , delay) {
+function delayMessage(message, delay) {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(message);
-    },delay );
+    }, delay);
   });
 }
-delayMessage("hello after 2 seconds",2000).then((result)=>{
-    console.log(result);
-})
+delayMessage("hello after 2 seconds", 2000).then((result) => {
+  console.log(result);
+});
